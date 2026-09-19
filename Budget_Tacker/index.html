@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+  <div class="container">
+    
+    <h1>Budget Tracker</h1>
+    <div class="summary">
+
+      <div class="card">
+        <h3>Total Income</h3>
+        <p class="income"><span id="totalIncome">0.00</span></p>
+      </div>
+      <div class="card">
+        <h3>Total Expnses</h3>
+        <p class="expense"><span id="totalExpense">0.00</span></p>
+      </div>
+
+      <div class="card">
+        <h3>balance</h3>
+        <p class="balance"><span id="balance">0.00</span></p>
+      </div>
+
+    </div>
+
+    <div class="form-box">
+
+      <h2>AddTransection</h2>
+
+      <form id="transactionForm">
+
+        <input type="date" id="date" required>
+
+        <input
+          type="text"
+          id="description"
+          placeholder="Description"
+          required
+        >
+
+        <input
+          type="number"
+          id="amount"
+          placeholder="Amount"
+          min="1"
+          required
+        >
+
+        <select id="type">
+          <option value="expense">Expense</option>
+          <option value="income">Income</option>
+        </select>
+
+        <button type="submit" id="submitBtn">
+          Add
+        </button>
+
+        <button type="delete" id="delete">
+            Delete
+        </button>
+        <button type="Edit" id="Edit">Edit</button>
+      </form>
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
